@@ -4,7 +4,7 @@ import { FieldsComponent } from './fields.component';
 import 'zone.js';
 
 // import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -22,10 +22,11 @@ import { MatFormField, MatLabel } from '@angular/material/form-field';
   selector: 'app-root',
   standalone: true,
   template: `
+    <h1>Hello {{name}}!</h1>
     <fields-component></fields-component>
   `,
   imports: [
-    CommonModule,
+    // CommonModule,
     BrowserModule,
     FormsModule,
     MatButtonToggleGroup,
@@ -41,6 +42,12 @@ export class App {
   name = 'Angular';
 }
 
-bootstrapApplication(App, {
-  providers: [provideHttpClient(withJsonpSupport()), provideAnimationsAsync()],
-});
+try {
+  bootstrapApplication(App, {
+    providers: [provideHttpClient(withJsonpSupport()), provideAnimationsAsync()],
+  });
+} catch (error) {
+  const pre = document.createElement("pre")
+  pre.innerHTML = JSON.stringify(error, null, 2)
+  document.body.appendChild(pre)
+}
