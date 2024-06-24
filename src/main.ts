@@ -9,7 +9,7 @@ import 'zone.js';
   selector: 'app-root',
   standalone: true,
   template: `
-    <fields-component></fields-component>
+    <fields-component class="block min-h-full"></fields-component>
   `,
   imports: [
     FieldsComponent,
