@@ -1,9 +1,24 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+@import "@angular/material/prebuilt-themes/azure-blue.css";
+// $theme: mat.define-theme();
+
 /* Add application styles & imports to this file! */
-@tailwind base;
-@tailwind components;
+// @tailwind base;
+// @tailwind components;
 @tailwind utilities;
 
-.example-form {
+:root {
+  overflow-y: hidden;
+}
+
+body {
+  height: 100dvh;
+  overflow-y: auto;
+}
+
+/* .example-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -21,4 +36,4 @@
 
 .example-full-width {
   width: 100%;
-}
+} */
