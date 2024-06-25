@@ -4,6 +4,12 @@
   <!-- Het gaat namelijk om alle classes hieronder die beginnen met "first:*" -->
   <mat-form-field class="w-3/4 first:*:!bg-white first:*:*:!bg-amber-400 first:*:hover:*:!opacity-35">
     <mat-label>Label</mat-label>
+
+    <!--
+      Trouwens, zie je dat ik ook een kruisje element krijg wanneer ik type?
+      En dat zonder dat ik een extra button element hier heb moeten plaatsen?
+      Dat komt omdat ik de input type="search" heb gegeven en Material UI doet dan de rest.
+    -->
     <input matInput type="search" placeholder="Ex. Pizza" placeholder="Search..." />
   </mat-form-field>
 </form>
