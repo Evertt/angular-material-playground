@@ -1,39 +1,18 @@
+// This is where Material UI gets imported.
 @use '@angular/material' as mat;
-
+// And initializes its core functionalities
 @include mat.core();
+// And applies one of their built-in themes,
+// which already includes certain "reset" css.
 @import "@angular/material/prebuilt-themes/azure-blue.css";
-// $theme: mat.define-theme();
 
-/* Add application styles & imports to this file! */
-// @tailwind base;
+
+
+/*
+ * These are the usual tailwind initialisation lines.
+ * @tailwind base includes the reset layer,
+ * which conflicted Material UI's theme.
+ */
+// @tailwind base; 
 // @tailwind components;
 @tailwind utilities;
-
-// :root {
-//   overflow-y: hidden;
-// }
-
-// body {
-//   height: 100dvh;
-//   overflow-y: auto;
-// }
-
-/* .example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-form > * {
-  margin-top: 2rem;
-  padding: 1rem;
-}
-
-.example-form * {
-  min-height: fit-content !important;
-  overflow: visible !important;
-}
-
-.example-full-width {
-  width: 100%;
-} */

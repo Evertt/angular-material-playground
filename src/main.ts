@@ -1,7 +1,7 @@
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { FieldsComponent } from './fields.component';
+import { FieldsComponent } from './components/fields/fields.component';
 import { Component } from '@angular/core';
 import 'zone.js';
 
