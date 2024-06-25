@@ -1,7 +1,14 @@
 <!-- Wederom mag je alle classes op dit form element negeren! -->
 <form class="relative top-[25cqh] h-[75cqh] flex justify-center *:h-fit">
 
-  <!-- Het gaat namelijk om alle classes hieronder die beginnen met "first:*" -->
+  <!--
+    Het gaat namelijk om alle classes hieronder die beginnen met "first:*".
+    Een "*:" selecteerd de directe kinderen van het element waar de class op staat.
+    Wat ik nog niet wist is dat je dat arbitrair kunt chainen, om steeds dieper te gaan.
+    Verder betekent "first" dat wanneer er meerdere kinderen op de geselecteerde laag zijn,
+    dat die dan de styling zoals "bg-amber-400" alleen op het eerste element toepast.
+    Tot slot betekenen die uitroeptekens hetzelfde als !important in normale css.
+  -->
   <mat-form-field class="w-3/4 first:*:!bg-white first:*:*:!bg-amber-400 first:*:hover:*:!opacity-35">
     <mat-label>Label</mat-label>
 
